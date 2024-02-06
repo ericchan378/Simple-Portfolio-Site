@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav {
+	overflow: hidden;
+	background-color: #0077b3;
+}
+.nav a {
+	float: left;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+}
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+.dropdown .dropBtn{
+	font-size: 20px;
+	color: white;
+	padding: 15px 15px;
+	background-color: inherit;
+	margin: 0;
+	outline: none;
+	border: none;
+}
+.nav a:hover{
+	background-color: #ccf2ff;
+	color: black;
+}
+.dropdown:hover .dropBtn{
+	background-color: #ccf2ff;
+	color: black;
+}
+
+.dropContent {
+	display:none;
+	position: absolute;
+	background-color: #ccf2ff;
+	min-width: 200px;
+}
+
+.dropContent a{
+	float: none;
+	color: black;
+	padding: 15px 15px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.dropContent a:hover{
+	background-color:#33ccff;
+}
+
+.dropdown:hover .dropContent{
+	display: block;
+}
+
+#resultsList{
+/*	border: 1px solid black;
+	border-collapse: collapse;*/
+	width: 50%;
+}
+
+.resultRow{
+	width: 50%;
+	height: 100px;
+}
+.checktd{
+/*	border: 1px solid black;
+	border-collapse: collapse;*/
+
+	width: 5%;
+	text-align: center;
+	vertical-align: middle;
+}
+.resulttd{
+/*	border: 1px solid black;
+	border-collapse: collapse;*/
+
+	vertical-align: middle;
+}
+
+.resultCheck{
+	height: 25px;
+	width: 25px;
+}
+.buttons{
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+}
+#fileInput{
+
+  	text-decoration: none;
+  	font-size: 16px;
+  	cursor: pointer;
+}
+#saveSelections{
+  	text-decoration: none;
+  	font-size: 16px;
+  	cursor: pointer;
+  	padding:0px 10px;
+}
+#fileType{
+	text-decoration: none;
+  	font-size: 16px;
+  	padding: 1px 5px;
+}
+
+#selectAll{
+	height: 25px;
+	width: 25px;
+}
+#searchDiv{
+	padding: 5px;
+}
+#query{
+	width:40%;
+	padding: 10px;
+	font-size: 16px;
+}
+#searchBtn{
+  	text-decoration: none;
+  	padding: 10px;
+  	font-size: 16px;
+  	cursor: pointer;	
+}
+#browserDiv table{
+  	font-family: arial, sans-serif;
+  	border-collapse: collapse;	
+}
+#browserDiv table, td{
+	border: 1px solid black;
+}
+#browserDiv td{
+	font-size: 20px;
+	padding: 10px;
+}
+
+#browserDiv tr:nth-child(even){
+  	background-color: #dddddd;
+}
+.nav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav div{display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+   .nav.responsive div {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

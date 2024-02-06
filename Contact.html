@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+<link rel="stylesheet" href="ecstyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	#contactInfo button{
+		font-size:20px;
+		padding: 10px 20px;
+
+	}
+	#contactInfo{
+		font-size: 20px;
+		margin: auto;
+		text-align: left;
+		width: 50%;
+		padding:20px;
+	}
+	#subject{
+		width: 100%;
+		height: 30px;
+		padding: 10px;
+	}
+	#message{
+		width:100%;
+		height: 200px;
+		padding: 10px;
+	}
+
+</style>
+</head>
+<body>
+	<h1> Eric Chan's Term Project </h1>
+	<div class="nav" id="myNav">
+		<a href="index.html">Home</a>
+		<div class="dropdown">
+			<button class="dropBtn">Course</button>
+			<div class="dropContent">
+				<a href="https://learn.zybooks.com/zybook/CUNYCSCI355TeitelmanFall2019">Zybooks</a>
+				<a href="https://app.tophat.com/e/972963/lecture/">TopHat</a>
+				<a href="https://drive.google.com/drive/folders/1DJYcquLa7z83dMEDOl3up6VJQiXykQUs">Google Drive</a>
+				<a href="https://www.w3schools.com/">W3Schools</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropBtn">About</button>
+			<div class="dropContent">
+				<a href="Developers.html">Developers</a>
+				<a href="Contact.html">Contact Us</a>
+			</div>
+		</div>
+		<a href="BrowserInfo.html">Browser</a>
+		<div class="dropdown">
+			<button class="dropBtn">Search</button>
+			<div class="dropContent">
+				<a href="searchFile.html">File</a>
+				<a href="GoogleAPISearch.html">Google Search API</a>
+				<a href="#">Custom</a>
+			</div>
+		</div>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    		<i class="fa fa-bars"></i>
+  		</a>
+	</div>
+
+
+	<div id="contactInfo">
+		<h2> Contact Us </h2>
+
+		Subject:<br>
+		<input type="text" id="subject"><br><br>
+		Message:<br>
+		<textarea id="message"></textarea><br>
+		<button onclick="sendMail()">Send</button>
+
+
+	</div>
+
+<script>
+	function sendMail(){
+		var link = "mailto:ericchan378@gmail.com?cc=" + 
+		"&subject=" + encodeURIComponent(document.getElementById("subject").value) +
+		 "&body=" + encodeURIComponent(document.getElementById("message").value);
+
+		 window.location.href = link;
+	}
+</script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myNav");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+}
+</script>
+
+	
+</body>
+</html>
